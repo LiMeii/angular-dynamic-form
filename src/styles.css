@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+.dynamic-wrapper{
+    margin-top:60px 300px;
+    background: white;
+    width: 100%;
+}
+
+.dynamic-container-wrapper {
+    margin: 0px 20px;
+}
+
+.dynamic-header-row {
+    padding: 20px 10px 0px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    border-bottom: 1px solid #111111;
+    font-weight: bold;
+}
+
+.dynamic-column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex:1;
+    height: auto;
+    min-height: 30px;
+    margin-right: 10px;
+}
+
+.dynamic-row{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    min-height: 40px;
+    border-bottom: 1px solid #d8dfe2;
+}
