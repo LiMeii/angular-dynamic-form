@@ -1,6 +1,17 @@
-<div class="dynamic-wrapper">
+<div class="dynamic-wrapper" [formGroup]="feeForm">
   <div class="dynamic-container-wrapper">
+
+
+    <div class="plusIcon">
+      <i class="fa fa-plus" (click)="addFeeItem()"><span>Add Item</span></i>
+    </div>
+
+
     <div class="dynamic-header-row">
+      <div class="dynamic-column deleteColumn">
+
+
+      </div>
       <div class="dynamic-column">
         User Level
 
@@ -15,14 +26,23 @@
       </div>
 
       <div class="dynamic-column">
-        Paid
+        Amount
 
       </div>
 
     </div>
-    <dynamic-fee></dynamic-fee>
+    <div formArrayName="feeArray">
+      <div *ngFor="let arrayItem of feeArray.controls;let i=index">
+        <div formGroupName="{{i}}">
+          <dynamic-fee (deleteFeeItem)="removeFeeItem()" [group]="feeForm.controls.feeArray.controls[i]"></dynamic-fee>
+        </div>
+      </div>
+    </div>
+
+    <button class="button" (click)="onSubmit()">Submit</button>
 
   </div>
+
 
 </div>
 

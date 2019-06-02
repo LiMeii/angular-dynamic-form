@@ -1,34 +1,33 @@
-<div class="dynamic-row">
-    <div class="dynamic-column">
-        <select>
-            <option>
-                normal user
-            </option>
-            <option>
-                VIP
-            </option>
+<form [formGroup]="group">
+    <div class="dynamic-row">
+        <div class="dynamic-column deleteColumn" (click)="onRemoveItem()">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="dynamic-column">
+            <select formControlName="userlevel">
+                <option value="user">
+                    user
+                </option>
+                <option value="VIP" selected>
+                    VIP
+                </option>
 
-        </select>
+            </select>
 
+
+        </div>
+
+        <div class="dynamic-column">
+            <input formControlName="tierMin">
+        </div>
+
+        <div class="dynamic-column">
+            <input formControlName="tierMax">
+        </div>
+
+        <div class="dynamic-column">
+            <input formControlName="amount">
+        </div>
 
     </div>
-
-    <div class="dynamic-column">
-        <input>
-
-
-    </div>
-
-    <div class="dynamic-column">
-        <input>
-
-
-    </div>
-
-    <div class="dynamic-column">
-        <input>
-
-
-    </div>
-
-</div>
+</form>

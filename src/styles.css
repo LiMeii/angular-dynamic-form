@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-.dynamic-wrapper{
-    margin-top:60px 300px;
+.dynamic-wrapper {
+    margin-top: 60px 300px;
     background: white;
     width: 100%;
 }
@@ -20,17 +20,17 @@
     font-weight: bold;
 }
 
-.dynamic-column{
+.dynamic-column {
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    flex:1;
+    flex: 1;
     height: auto;
-    min-height: 30px;
+    min-height: 20px;
     margin-right: 10px;
 }
 
-.dynamic-row{
+.dynamic-row {
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -39,4 +39,31 @@
     height: auto;
     min-height: 40px;
     border-bottom: 1px solid #d8dfe2;
+}
+
+.button {
+    margin: 10px 0;
+    font-size: 1em;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.deleteColumn {
+    max-width: 20px;
+}
+
+.plusIcon {
+    color: #008CBA;
+    margin-top: 60px;
+}
+
+.plusIcon span {
+    padding: 10px;
 }
