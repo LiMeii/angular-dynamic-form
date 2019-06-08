@@ -10,6 +10,8 @@ import { MessageService } from './app.message-service';
 export class AppComponent implements OnInit {
   title = 'angular-dynamic-form';
   feeForm: FormGroup;
+  isSubmitted: boolean = false;
+
   constructor(private fb: FormBuilder, private messageService: MessageService) { }
 
   ngOnInit() {
@@ -40,7 +42,10 @@ export class AppComponent implements OnInit {
   }
 
   onSubmit() {
-    this.messageService.sendIsFeeItemsSubmit(true);
-    console.log(this.feeForm.controls.feeArray);
+    this.isSubmitted = true
+    this.messageService.sendIsFeeItemsSubmit(this.isSubmitted);
+    if (this.feeForm.valid) {
+      console.log(this.feeForm.controls.feeArray);
+    }
   }
 }
