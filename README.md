@@ -1,4 +1,4 @@
-# AngularDynamicForm
+# Angular Dynamic Form
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
@@ -6,8 +6,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 And it's a Demo project which used to show how to use the dynamic form.
 
 
-## Development server
+You can follow the [tutorial here](https://limeii.github.io/2019/05/31/angular-dynamic-form.html)
 
-Run `ng serve` or `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Running the project
+
+1. npm install
+
+
+2. npm run start / ng serve
+
+
+This will start up a local development server at localhost:4200
 
 
