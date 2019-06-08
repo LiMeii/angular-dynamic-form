@@ -30,6 +30,23 @@
     margin-right: 10px;
 }
 
+.dynamic-column select {
+    height: 30px;
+}
+
+.dynamic-column input {
+    height: 24px;
+}
+
+.dynamic-column .error {
+    border: 1px solid red;
+}
+
+.dynamic-column .error-text {
+    color: red;
+    padding: 5px
+}
+
 .dynamic-row {
     padding: 10px;
     display: flex;

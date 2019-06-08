@@ -4,7 +4,7 @@
             <i class="fa fa-close"></i>
         </div>
         <div class="dynamic-column">
-            <select formControlName="userlevel">
+            <select formControlName="userlevel" [class.error]="feeItemErrors.userlevel">
                 <option value="user">
                     user
                 </option>
@@ -13,20 +13,23 @@
                 </option>
 
             </select>
-
+            <div class="error-text">{{feeItemErrors.userlevel}}</div>
 
         </div>
 
         <div class="dynamic-column">
-            <input formControlName="tierMin">
+            <input formControlName="tierMin" [class.error]="feeItemErrors.tierMin">
+            <div class="error-text">{{feeItemErrors.tierMin}}</div>
         </div>
 
         <div class="dynamic-column">
-            <input formControlName="tierMax">
+            <input formControlName="tierMax" [class.error]="feeItemErrors.tierMax">
+            <div class="error-text">{{feeItemErrors.tierMax}}</div>
         </div>
 
         <div class="dynamic-column">
-            <input formControlName="amount">
+            <input formControlName="amount" [class.error]="feeItemErrors.amount">
+            <div class="error-text">{{feeItemErrors.amount}}</div>
         </div>
 
     </div>

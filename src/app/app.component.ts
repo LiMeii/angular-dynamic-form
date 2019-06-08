@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
+
+import { MessageService } from './app.message-service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'angular-dynamic-form';
   feeForm: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private messageService: MessageService) { }
 
   ngOnInit() {
     this.feeForm = this.fb.group({
@@ -25,10 +27,10 @@ export class AppComponent implements OnInit {
   addFeeItem() {
     this.feeArray.push(
       this.fb.group({
-        userlevel: [],
-        tierMin: [],
-        tierMax: [],
-        amount: []
+        userlevel: ['', Validators.required],
+        tierMin: ['', Validators.required],
+        tierMax: ['', Validators.required],
+        amount: ['', Validators.required]
       })
     )
   }
@@ -37,7 +39,8 @@ export class AppComponent implements OnInit {
     this.feeArray.removeAt(this.feeArray.length - 1);
   }
 
-  onSubmit(){
+  onSubmit() {
+    this.messageService.sendIsFeeItemsSubmit(true);
     console.log(this.feeForm.controls.feeArray);
   }
 }
