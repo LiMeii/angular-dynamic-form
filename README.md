@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 And it's a Demo project which used to show how to use the dynamic form.
 
 
-You can follow the [tutorial here](https://limeii.github.io/2019/05/31/angular-dynamic-form.html)
+You can follow the [tutorial here](https://limeii.github.io/2019/05/angular-dynamic-form/)
 
 
 ## Running the project
