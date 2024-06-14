@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
-
+import { debounceTime, switchMap, tap } from 'rxjs/operators';
+import { of } from 'rxjs';
 import { MessageService } from './app.message-service';
 
 @Component({
@@ -20,6 +21,22 @@ export class AppComponent implements OnInit {
 
     });
     this.addFeeItem();
+
+
+    this.feeForm.valueChanges.pipe(
+      tap(() => {
+        console.log('set testFlag to false')
+      }),
+      debounceTime(3000),
+      switchMap(() => {
+        console.log('switch map called');
+        return of({ success: true })
+      })
+    ).subscribe((response) => {
+      // Handle API response here
+      console.log(JSON.stringify(response))
+      console.log('API call sucess')
+    });
   }
 
   get feeArray() {
